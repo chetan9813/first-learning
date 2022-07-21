@@ -1,0 +1,21 @@
+name1 = 'g'
+name2 = 'h'
+verb1 = 'j'
+place1 = 'k'
+print(f'{name1} scored well in exams because {name2} was {verb1} in {place1}.')
+
+import random
+
+def guess_number(x):
+    random_number = random.randint(1, x)
+    guess = 0
+    while guess != random_number:
+        guess = int(input(f'guess a number between 1 and {x}: '))
+        if guess < random_number:
+            print('the number is high, try again')
+        elif guess > random_number:
+            print('the number is low, try again')
+    
+    print(f'the number you guessed is right and yes it is {random_number}')
+
+guess_number(10)
