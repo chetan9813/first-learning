@@ -1,1 +1,1 @@
-# first-learning is the fiest code copied from a youtube channel freecodecamp.org
+# first-learning is the some code copied from a youtube channel freecodecamp.org
