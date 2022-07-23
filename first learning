@@ -19,3 +19,22 @@ def guess_number(x):
     print(f'the number you guessed is right and yes it is {random_number}')
 
 guess_number(10)
+
+def game(x):
+    low = 1
+    high = x
+    feedback = ''
+    while feedback != 'c':
+        if low != high:
+            guess = random.randint(low, high)
+        else:
+            guess = low
+        feedback = input(f'if the number {guess} high(h), low(l) or correct(c):? ')
+        if feedback == 'h':
+            high = guess - 1 
+        elif feedback == 'l':
+            low = guess + 1
+    
+    print(f'I told you the computer is smart, i knew your guess was {guess}')
+
+game(576)
