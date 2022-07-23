@@ -1,8 +1,12 @@
+# random lines 
+
 name1 = 'g'
 name2 = 'h'
 verb1 = 'j'
 place1 = 'k'
 print(f'{name1} scored well in exams because {name2} was {verb1} in {place1}.')
+
+# guess the number 
 
 import random
 
@@ -19,6 +23,8 @@ def guess_number(x):
     print(f'the number you guessed is right and yes it is {random_number}')
 
 guess_number(10)
+
+# guess the number but by computer
 
 def game(x):
     low = 1
@@ -38,3 +44,21 @@ def game(x):
     print(f'I told you the computer is smart, i knew your guess was {guess}')
 
 game(576)
+
+# stone paper scissor
+
+import pickle
+
+def game():
+    while pickle.TRUE:
+        guess = random.choice(['s', 'p', 'c'])
+        feed = input('type s for stone, c for scissors and p for papers: ')
+        if guess == feed:
+            print('tie')
+        elif (guess == 'c' and feed == 'p') or (guess == 's' and feed == 'c') or (guess == 'p' and feed == 's'):
+            print('you lost')
+        else:
+            print('you won')
+
+game()
+
