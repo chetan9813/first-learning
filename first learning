@@ -1,12 +1,4 @@
-# random lines 
-
-name1 = 'g'
-name2 = 'h'
-verb1 = 'j'
-place1 = 'k'
-print(f'{name1} scored well in exams because {name2} was {verb1} in {place1}.')
-
-# guess the number 
+# guess the number(exact video code) 
 
 import random
 
@@ -24,7 +16,27 @@ def guess_number(x):
 
 guess_number(10)
 
-# guess the number but by computer
+# guess the number(my version)
+
+import random
+from re import L
+ 
+def max_limit(x):
+    computer_guess = random.randint(1,x)
+    user = int(input('guess your number: '))
+    while user != computer_guess:
+        if user < computer_guess:
+            print('your guess is low')
+        elif user > computer_guess:
+            print('ur guess is high')
+        
+        user = int(input('guess ur number: '))
+    
+    print("correct")
+
+max_limit(12)
+
+# guess the number but by computer(exact video code)
 
 def game(x):
     low = 1
@@ -44,6 +56,31 @@ def game(x):
     print(f'I told you the computer is smart, i knew your guess was {guess}')
 
 game(576)
+
+# uess the number but by computer(my version)
+
+import random
+
+def max_limit(x):
+    low = 0
+    high = x
+    guess = random.randint(low,high)
+    a = 1
+    user = input(f'is the number {guess} high(h), low(l) or correct(c): ')
+    while user != 'c':
+        a = a + 1 
+        if user == 'h':
+            high = guess - 1
+        elif user == 'l':
+            low = guess + 1
+
+        guess = random.randint(low,high)
+        user = input(f'is the number {guess} high(h), low(l) or correct(c): ')
+    
+    print(f'computer guessed the number in {a} tries.')
+
+
+max_limit(600)
 
 # stone paper scissor
 
